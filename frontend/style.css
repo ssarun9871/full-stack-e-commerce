@@ -7,22 +7,89 @@ p{
     vertical-align: middle;
   
 }
+nav{
+    position: absolute;
+}
 
 .cart{
-    display:block;
     position: absolute;
-    float: right;
-    width:28% !important;
-    position: absolute;
-    left:72%;
+    width:25rem; 
+
     top:100%;
-    height: 30rem;
+    height: 40rem;
+    right: 0;
     background-color: white;
     border-radius: 0.5%;
     border:solid 1px;
-    z-index: 1;
+    z-index: 9;
+    justify-content: center;
     
   
+}
+
+.cart_div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.inc_dec_input{
+    width: 45px;
+    height: 40%;
+    margin-top: 15%;
+}
+
+.remove_btn{
+    height: 40%;
+    margin-top: 15%;
+  
+    background-color: red;
+    border-color: red;
+    font-weight: 700;
+    color: #fafafa;
+    border-radius: 4px;
+}
+
+.cart_contents{
+    width: 100%;
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    border: solid 2px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.cart_heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 600;
+  
+}
+
+.notification{
+    border: solid 0.5px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #fafafa;
+    font-weight: 600;
+    width: 270px;
+ 
+    align-self: center;
+    background-color: 	#FFCC00;
+}
+.latest_album{
+    font-size: 35%;
+    width: 25%;
+    align-self: center;
+    border: solid  2px;
+    border-color: #56CCF2;
+
+}
+.table{
+    width: 60%;
+    color: #777;
 }
 .generics{
     display: flex;
@@ -37,6 +104,12 @@ p{
     height: 20%;
 
 }
+.band_img{
+    width: 200px;
+    height: 200px;
+    margin: 20px 50px;
+    border-radius: 50%;
+}
 
 .products_heading{
     font-size: 2rem;
@@ -46,7 +119,7 @@ p{
 }
 
 .products{
-    background-color:#f7f7f7;
+    background-color:white;
     height: 100%;
     width: 100%;
     display: flex;
@@ -61,18 +134,47 @@ p{
     margin-top: 2rem;
 }
 .card{
-    padding: 0.5%;
+    padding: 1%;
+    background-color: #fafafa;
+    margin-bottom: 15px;
 
 }
 .price{
     margin: 0;
     text-align: center;
 }
+.btn-primary{
+    background-color:#56CCF2;
+    border: solid;
+    font-weight: 700;
+    width: 70%; 
+    align-self: center;
+}
+.album{
+    margin:0;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.buy_tickets_btn{
+    
+    border-radius: 5px;
+    border: solid;
+    border-color: #56CCF2;
+    background-color: #56CCF2;
+    width: 10rem;
+    color: white;
+    font-weight: 700;
+}
 
 .card-img-top{
     height: 70%;
-    background-color: aquamarine;
-
-
+    background-color: white;
+    object-fit:fill;
+    transition: 0.4s;
+}
+.card-img-top:hover{
+transform: scale(1.06);
 }
 
