@@ -32,18 +32,18 @@ async function addToCart(event) {
    event.preventDefault(event);
    let id = event.target.id;
    if(id=="") return;
-   let res = await axios.get(`http://localhost:3000/products/${id}`);
-   
+   let res = await axios.post(`http://localhost:3000/cart/${id}`);
+  
    
    let parent = document.querySelector('.ul');
    let cartProduct = document.createElement('li');
    let html = `<div class="cart_contents">
                  <div style="width: 40%;height: 5rem;  display: flex;flex-direction: row; padding: 5px;">
-                   <img  src ="${res.data.imageUrl}"style=" width: 50%;height: 95%;border-radius: 5px;" >
-                   <span style="margin-left: 6px;align-self: center;">${res.data.title}</span> </div>
+                   <img  src ="${res.data.item.imageUrl}"style=" width: 50%;height: 95%;border-radius: 5px;" >
+                   <span style="margin-left: 6px;align-self: center;">${res.data.item.title}</span> </div>
 
                  <div style="width: 16%;height: 5rem;  display: flex;flex-direction: column;justify-content: center;">
-                   <span style="align-self: center;">${res.data.price}</span> </div>
+                   <span style="align-self: center;">${res.data.item.price}</span> </div>
 
                  <div style="width: 38%;height: 5rem; display: flex;flex-direction: row;justify-content: space-evenly;">
                   <input class="inc_dec_input" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
